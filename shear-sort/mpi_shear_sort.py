@@ -9,9 +9,9 @@ import argparse
 ###
 
 
-def log(*args):
+def log(*args, **kwargs):
     if MPI.COMM_WORLD.Get_rank() == 0:
-        print(*args)
+        print(*args, **kwargs)
 
 
 def parse_args():
